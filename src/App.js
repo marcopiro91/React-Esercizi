@@ -1,9 +1,9 @@
 import React from "react";
-import { Counter } from "./Counter"
+import { ClickCounter } from "./ClickCounter"
 
 export class App extends React.Component {
     render() {
-        return <Counter initialValue = {5} intervalValue = {2000} incrementValue = {2}/>
+        return <ClickCounter />
     }
 }
 
