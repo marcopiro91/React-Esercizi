@@ -2,15 +2,14 @@ import React from "react";
 import { CounterDisplay } from "./CounterDisplay";
 
 export class Counter extends React.Component {
-    constructor(props) {
-        super(props)
 
-        this.state = {
-            counter: this.props.initialValue ?? 0,
-            interval: this.props.intervalValue ?? 1000,
-            increment: this.props.incrementValue ?? 1
-        }
+    state = {
+        counter: this.props.initialValue ?? 0,
+        interval: this.props.intervalValue ?? 1000,
+        increment: this.props.incrementValue ?? 1
+    }
 
+    componentDidMount() {
         setInterval(() => {
             this.setState((state) => {
                 return {
@@ -18,7 +17,6 @@ export class Counter extends React.Component {
                 } 
             })
         }, this.props.intervalValue)
-
     }
 
     render() {
@@ -26,4 +24,4 @@ export class Counter extends React.Component {
     }
 }
 
-/* Extract the h1 tag showing the count state variable into a new component called CounterDisplay and render it within the Counter component, passing it the count state variable as a prop. */
+/* Modify the Counter component so that the interval is initialized within the componentDidMount life cycle method instead of the constructor. Is the constructor still required? */
