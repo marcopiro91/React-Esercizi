@@ -12,8 +12,10 @@ export class ToDoList extends React.Component {
 
     handleButtonClick = () => {
         this.setState((state) => {
+            const value = this._input.current.value
+            this._input.current.value = ""
             return {
-                todos: [...state.todos, this._input.current.value]
+                todos: [...state.todos, value]
             }
         })
     }
