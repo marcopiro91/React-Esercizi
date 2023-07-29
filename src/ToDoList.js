@@ -36,9 +36,7 @@ export class ToDoList extends React.Component {
     render() {
             return  <div>
                         <ul>
-                            {this.state.todos.map((item, index) => {
-                                return <li key={index}>{item}<button onClick={()=> {this.handleRemove(index)}}>remove</button></li>
-                            })}
+                            {this.props.render(this.state.todos, this.handleRemove)}
                         </ul>
                         <input ref={this._input} type="text" />
                         <button onClick={this.handleButtonClick}>Add item</button>
