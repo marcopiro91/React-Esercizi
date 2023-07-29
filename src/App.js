@@ -1,11 +1,9 @@
 import React from "react";
-import { Login } from "./Login"
+import { ToDoList } from "./ToDoList"
 
 export class App extends React.Component {
     render() {
-        return <div>
-                    <Login onLogin = {this.onLogin} />
-               </div>
+        return <ToDoList />
     }
 }
 
