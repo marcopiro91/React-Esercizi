@@ -22,6 +22,6 @@ export function GithubUser({username}) {
 
     return  <div>
                 {error && <h1>ERROR!</h1>}
-                {data && <h1>{data.name}, {data.location}, {data.bio}</h1>}
+                {data && <h1>{data.name}</h1>}
             </div>
 }
