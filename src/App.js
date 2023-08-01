@@ -1,5 +1,5 @@
 import React from "react";
-import { Counter } from "./Counter"
+import { GithubUser } from "./GithubUser"
 
 
 
@@ -7,7 +7,7 @@ import { Counter } from "./Counter"
 
 
 export function App() {
-    return <Counter />
+    return <GithubUser username="gianmarcotoso"/>
 }
 
 
