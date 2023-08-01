@@ -3,7 +3,11 @@ import { ToDoList } from "./ToDoList"
 
 export class App extends React.Component {
     render() {
-        return <ToDoList />
+        return <ToDoList render={
+            
+        }>
+
+               </ToDoList>
     }
 }
 
