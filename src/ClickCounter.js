@@ -1,36 +1,24 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
-/* export class ClickCounter extends React.Component {
-    state = {
-        counter: this.props.initialValue ?? 0
+/* Add a side effect to the ClickCounter component from useState 01 that calls a onCounterChange function with the current value of the counter every time value of the counter changes. The function should be received as a prop. */
+
+export function ClickCounter({onCounterChange}) {
+    const [counter, setCounter] = useState(0)
+
+    useEffect(() => {
+        onCounterChange(counter)
+    }, [counter, onCounterChange])
+
+    function handleCounterIncrement() {
+        setCounter(counter => counter + 1)
     }
 
-    handleClick = () => {
-        this.setState((prevstate) => {
-            return {counter: prevstate.counter + 1}
-        })
-    }
+    
 
-    render() {
-        return (
-            <div>
-                <h1>{this.state.counter}</h1>
-                <button onClick={this.handleClick}>click me!</button>
-            </div>
-        )
-    }
-} */
-
-export function ClickCounter() {
-    const [count, setCount] = useState(0)
-
-    function handleButtonClick() {
-        setCount((num) => num + 1)
-    }
     return (
         <div>
-            <h1>Counter: {count}</h1>
-            <button onClick={handleButtonClick}>click me!</button>
+            <h1>Counter: {counter}</h1>
+            <button onClick={handleCounterIncrement}>click me!</button>
         </div>
     )
 }

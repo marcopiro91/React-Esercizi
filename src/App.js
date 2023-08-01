@@ -3,10 +3,17 @@ import { ClickCounter } from "./ClickCounter"
 
 
 
-export class App extends React.Component {
-    render() {
-        return <ClickCounter />
+
+
+
+export function App() {
+
+    const handleCounterChange = (counterValue) => {
+        console.log('Counter changed', counterValue);
     }
+
+
+    return <ClickCounter onCounterChange={handleCounterChange} />
 }
 
 
