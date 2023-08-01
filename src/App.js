@@ -23,8 +23,6 @@ export class App extends React.Component {
                     <DisplayLanguage />
                  </LanguageContext.Provider>
                </div>
-        
-        
     }
 }
 
