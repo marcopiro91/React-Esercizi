@@ -1,10 +1,10 @@
 import React from "react";
-import { GithubUserList } from "./GithubUserList";
+import { Counter } from "./Counter"
 
 
 
 export function App() {
-    return <GithubUserList />
+    return <Counter/>
 }
 
 
