@@ -1,10 +1,10 @@
 import React from "react";
-import { Form } from "./Form"
+import { GithubUser } from "./GithubUser"
 
 
 
 export function App() {
-    return <Form/>
+    return <GithubUser username = "gianmarcotoso"/>
 }
 
 
