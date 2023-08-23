@@ -1,10 +1,10 @@
 import React from "react";
-import { CarDetails } from "./CarDetails";
+import { Counter } from "./Counter";
 
 
 
 export function App() {
-    return <CarDetails initialData={{model: 'bmw', year: '2023', color: 'steel'}} />
+    return <Counter />
 }
 
 
