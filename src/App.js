@@ -1,10 +1,10 @@
 import React from "react";
-import { GithubUser } from "./GithubUser"
+import { CarDetails } from "./CarDetails";
 
 
 
 export function App() {
-    return <GithubUser username = "gianmarcotoso"/>
+    return <CarDetails initialData={{model: 'bmw', year: '2023', color: 'steel'}} />
 }
 
 
