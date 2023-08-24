@@ -5,7 +5,6 @@ export function GithubUser({username}) {
     const {data, error, isLoad} = useGithubUser(username)
 
 
-
     return (
         <div>
             {isLoad && <h1>Loading...</h1>}
