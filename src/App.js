@@ -9,7 +9,7 @@ export function App() {
 
     return (
         <div>
-            <GithubUser username="" />
+            <GithubUser username="gianmarcotoso" />
         </div>
     )
 }
